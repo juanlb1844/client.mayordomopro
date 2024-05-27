@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="cart-page-area">
+    <a class="btn back-page-btn" routerLink="/main/cart"
+      ><i class="ri-arrow-left-s-line"></i
+    ></a>
+    <h6 class="page-title text-center">Payment Method</h6>
+    <div class="payment-wrap">
+      <ul class="payment-check">
+        <li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1"> </label>
+            Cash on delivery
+          </div>
+        </li>
+        <li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2"> </label>
+            Credit or Debit card
+          </div>
+        </li>
+      </ul>
+      <ul class="payment-card">
+        <li>
+          <a javascript="void();"
+            ><img src="assets/img/icon/card/1.png" alt="img"
+          /></a>
+        </li>
+        <li>
+          <a javascript="void();"
+            ><img src="assets/img/icon/card/2.png" alt="img"
+          /></a>
+        </li>
+        <li>
+          <a javascript="void();"
+            ><img src="assets/img/icon/card/3.png" alt="img"
+          /></a>
+        </li>
+        <li>
+          <a javascript="void();"
+            ><img src="assets/img/icon/card/4.png" alt="img"
+          /></a>
+        </li>
+      </ul>
+      <label>Card Number</label>
+      <div class="single-input-wrap style-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="6369 9995 0075 3696"
+        />
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label>Expiration Date</label>
+          <div class="single-input-wrap style-2">
+            <input type="text" class="form-control" placeholder="12/24" />
+          </div>
+        </div>
+        <div class="col-6">
+          <label>CVV</label>
+          <div class="single-input-wrap style-2">
+            <input type="text" class="form-control" placeholder="477" />
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-base w-100" routerLink="/blank/order-success"
+        >Place Order</a
+      >
+    </div>
+  </div>
+</div>

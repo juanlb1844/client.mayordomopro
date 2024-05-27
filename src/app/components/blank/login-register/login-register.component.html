@@ -1,0 +1,78 @@
+<div class="sc5-2">
+  <div class="height-100vh">
+    <div class="bg-main onboard-page">
+      <div class="container">
+        <div
+          class="align-items-center text-center justify-content-center vh-100"
+        >
+          <a class="btn-skip" routerLink="/blank/register">Skip</a>
+
+          <owl-carousel-o [options]="customOptions" class="onboard-slider">
+            <ng-template carouselSlide>
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="thumb">
+                    <img src="assets/img/onboard/1.png" alt="img" />
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-12 align-self-center">
+                  <div class="onboard-wrap">
+                    <h4>Located in one place during demand & runtime</h4>
+                    <p>
+                      Foodka helps you find the best food around your location
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="thumb">
+                    <img src="assets/img/onboard/2.png" alt="img" />
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-12 align-self-center">
+                  <div class="onboard-wrap">
+                    <h4>Search for favorite food near you location</h4>
+                    <p>
+                      Order food and get deleviery in the fastest time in the
+                      town
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide
+              ><div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="thumb">
+                    <img src="assets/img/onboard/3.png" alt="img" />
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-12 align-self-center">
+                  <div class="onboard-wrap">
+                    <h4>Good quality with fast delivery preferred time</h4>
+                    <p>
+                      Delivering food from top restaurants at your home and
+                      office preferred time
+                    </p>
+                  </div>
+                </div>
+              </div></ng-template
+            >
+          </owl-carousel-o>
+
+          <div class="btn-wrap">
+            <a
+              class="onboard-btn onboard-btn-active"
+              routerLink="/blank/register"
+              >Register</a
+            >
+            <a class="onboard-btn" routerLink="/blank/login">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

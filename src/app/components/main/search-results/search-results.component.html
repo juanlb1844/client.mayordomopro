@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="cart-page-area">
+    <div class="home-search-wrap">
+      <div class="default-form-wrap mb-0">
+        <div class="single-input-wrap mb-0">
+          <label><img src="assets/img/icon/search.svg" alt="img" /></label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for food"
+          />
+        </div>
+        <button type="button" class="link-btn" routerLink="/main/principal">
+          Cancel
+        </button>
+      </div>
+    </div>
+    <div class="search-result">
+      <p><span>“Pizza”</span> 5 meals found</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="single-item-wrap" *ngFor="let p of products">
+    <div class="thumb">
+      <img src="assets/img/item/{{ p.img }}.png" alt="img" />
+    </div>
+    <div class="details">
+      <h6>
+        <a routerLink="/main/product-details">{{ p.name }}</a>
+      </h6>
+      <p>{{ p.description }}</p>
+      <span class="price">From ${{ p.price }}</span>
+    </div>
+    <a class="btn back-page-btn" routerLink="/main/product-details"
+      ><i class="ri-arrow-right-s-line"></i
+    ></a>
+  </div>
+</div>

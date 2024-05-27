@@ -1,0 +1,120 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mayordomo-frontend": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/mayordomo-frontend",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [
+              "src/assets/css/animate.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/magnific.min.css",
+              "src/assets/css/jquery-ui.min.css",
+              "src/assets/css/nice-select.min.css",
+              "src/assets/css/owl.min.css",
+              "src/assets/css/slick-slide.min.css",
+              "src/assets/css/fontawesome.min.css",
+              "src/assets/css/remixicon/remixicon.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/demo.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/assets/js/jquery.3.6.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/imageloded.min.js",
+              "src/assets/js/waypoint.js",
+              "src/assets/js/magnific.min.js",
+              "src/assets/js/isotope.pkgd.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/nice-select.min.js",
+              "src/assets/js/fontawesome.min.js",
+              "src/assets/js/owl.min.js",
+              "src/assets/js/slick-slider.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/tweenmax.min.js",
+              "src/assets/js/ripple.js",
+              "src/assets/js/main.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "mayordomo-frontend:build:production"
+            },
+            "development": {
+              "buildTarget": "mayordomo-frontend:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "mayordomo-frontend:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}
